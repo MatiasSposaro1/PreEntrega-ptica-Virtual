@@ -1,0 +1,303 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Segoe UI, Roboto, sans-serif;
+}
+
+header {
+    background-color: #f2f2f2;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.logo {
+    height: 76px ;
+    margin-bottom: 5px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    
+      color: #2fa4a9;
+}
+
+/* ===========================
+   HERO PRINCIPAL
+=========================== */
+.hero {
+  height: 75vh;
+  background: url("../img/hero.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 16px;
+  backdrop-filter: blur(2px);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-hero {
+  background-color: #2fa4a9; /* verde menta */
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-hero:hover {
+  background-color: #1e3a5f; /* azul petróleo */
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .hero h1 { font-size: 1.8rem; }
+  .hero p { font-size: 1rem; }
+}
+
+/* ====== Productos ====== */
+.section{padding-block:2rem}
+.section h2{margin:0 0 .25rem}
+.section-lead{color:#64748b;margin:0 0 1rem}
+
+.cards{
+  display:flex; flex-wrap:wrap; gap: 1.25em; align-items:center;
+}
+
+
+.card {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(2,6,23,.08);
+}
+
+.card img{
+  width: 100%;
+  height: 220px;           /* ⇦ misma altura en todas */
+  object-fit: cover;       /* recorta sin deformar */
+  display: block;
+}
+
+/* Cuerpo y pie de la card */
+.card__body{ padding: 1rem 1rem 0.75rem; }
+.card__body h3{ margin: 0 0 .25rem; font-weight: 700; }
+.card__body p{ margin: 0 0 .75rem; color:#667085; }
+
+/* Pie con precio y botón alineados */
+.card__foot{
+  display:flex; align-items:center; justify-content:space-between;
+  padding: 0 1rem 1rem;
+}
+
+.price{ color:#2fa4a9; font-weight:700; }
+
+/* Botón prolijo */
+.btn, .btn.btn-sm{
+  background:#2fa4a9; color:#fff; border-radius:10px; border:0;
+  padding:.6rem 1rem; text-decoration:none; font-weight:600;
+}
+.btn.btn-sm:hover{ background:#1e3a5f; }
+
+/* Espaciado general */
+.section { padding-block: 2.5rem; }
+.section h2 { margin-bottom: .25rem; }
+.section-lead { margin: 0 0 1.25rem; color:#7a8699; }
+.cards{gap:1.25rem}
+.card{max-width:calc(25% - .9rem); border-radius:16px; box-shadow:0 10px 24px rgba(2,6,23,.08)}
+.card__body{padding:1rem 1rem .75rem}
+.price{font-weight:700; color:#2fa4a9}
+.btn.btn-sm{padding:.6rem .9rem; border-radius:10px}
+
+/* Responsive */
+@media (max-width: 1024px){ .card{max-width:calc(33.333% - .7rem);} }
+@media (max-width: 720px){ .card{max-width:calc(50% - .6rem);} }
+@media (max-width: 480px){ .card{max-width:100%;} }
+
+/* ================================
+   FORMULARIO DE CONTACTO
+================================ */
+.contacto {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  max-width: 600px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row label {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: #252a3a; /* azul oscuro */
+  font-family: 'Poppins', sans-serif;
+}
+
+input,
+textarea {
+  padding: 0.8rem 1rem;
+  border: 1.5px solid #d1d5db;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #2fa4a9; /* verde menta */
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(47, 164, 169, 0.2);
+}
+
+/* Botón principal */
+.btn {
+  background-color: #2fa4a9; /* verde menta */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #325d9f; /* azul medio */
+  transform: translateY(-2px);
+}
+
+/* Título y texto */
+.section h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #252a3a;
+  margin-bottom: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.section p {
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 2rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .contacto {
+    padding: 1.5rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ================================
+   FOOTER DESIGN
+================================ */
+.footer {
+  background-color: #252a3a; /* azul oscuro */
+  color: #e5f7f1;
+  margin-top: 3rem;
+  padding: 1.5rem 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer small {
+  color: #a7b4c2;
+}
+
+.footer .social {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.footer .social a {
+  text-decoration: none;
+  color: #2fa4a9; /* verde menta */
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.footer .social a:hover {
+  color: #f2b544; /* amarillo acento */
+}
+
+@media (max-width: 600px) {
+  .footer__content {
+    flex-direction: column;
+    gap: 0.8rem;
+    text-align: center;
+  }
+}
+
+
+/* style para que el footer quede al final de la página */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* ocupa todo el espacio disponible */
+}

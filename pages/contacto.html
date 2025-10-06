@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio Óptico Virtual - Contacto</title>
+
+      <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/estilo.css">
+
+    <!-- Meta Descripción -->
+    <meta name="description" content="Óptica virtual: armazones, lentes recetados y de sol. Envíos a todo el país. Asesoramiento por WhatsApp." />
+</head>
+
+<body>
+ <header>
+        <nav class="navegacion">
+         <img src="../img/Logo-removebg-preview.png" alt="Logo Laboratorio Óptico Virtual" class="logo">
+            <ul class="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="">Productos</a></li>
+                <li><a href="/pages/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>  
+ </header>
+
+  <main class="container section">
+    <h2>Formulario de Contacto</h2>
+    <p>Completá el formulario y te responderemos a la brevedad.</p>
+
+    <!-- 🟢 REEMPLAZÁ el "action" con tu link de Formspree -->
+    <form class="contacto" action="https://formspree.io/f/xeorznpw" method="POST">
+
+      <div class="form-row">
+        <label for="nombre">Nombre</label>
+        <input id="nombre" name="nombre" type="text" required placeholder="Tu nombre completo">
+      </div>
+
+      <div class="form-row">
+        <label for="email">Correo electrónico</label>
+        <input id="email" name="email" type="email" required placeholder="tuemail@ejemplo.com">
+      </div>
+
+      <div class="form-row">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Contanos qué tipo de lentes o servicio necesitás..."></textarea>
+      </div>
+
+      <button class="btn" type="submit">Enviar mensaje</button>
+    </form>
+
+
+</body>
